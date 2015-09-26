@@ -22,7 +22,11 @@ syn keyword djinniStructure enum
 syn keyword djinniStructure record
 syn keyword djinniStructure interface
 
+syn keyword djinniQualifier static
+syn keyword djinniQualifier const
+
 hi def link djinniTodo Todo
 hi def link djinniComment Comment
 hi def link djinniPrimitiveType Type
 hi def link djinniStructure Structure
+hi def link djinniQualifier StorageClass
