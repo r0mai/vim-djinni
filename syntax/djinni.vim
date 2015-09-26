@@ -25,8 +25,18 @@ syn keyword djinniStructure interface
 syn keyword djinniQualifier static
 syn keyword djinniQualifier const
 
+syn region djinniImported display contained start=+"+ end=+"+
+syn match djinniImport display "^\s*@\s*import\s*\"" contains=djinniImported
+syn region djinniExterned display contained start=+"+ end=+"+
+syn match djinniExtern display "^\s*@\s*extern\s*\"" contains=djinniExterned
+
 hi def link djinniTodo Todo
 hi def link djinniComment Comment
 hi def link djinniPrimitiveType Type
 hi def link djinniStructure Structure
 hi def link djinniQualifier StorageClass
+hi def link djinniMacro Macro
+hi def link djinniImported String
+hi def link djinniImport Include
+hi def link djinniExterned String
+hi def link djinniExtern Include
