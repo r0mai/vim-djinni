@@ -30,6 +30,11 @@ syn keyword djinniStructure interface
 syn keyword djinniQualifier static
 syn keyword djinniQualifier const
 
+syn match djinniExt "+j"
+syn match djinniExt "+c"
+syn match djinniExt "+o"
+syn match djinniExt "+p"
+
 syn region djinniImported display contained start=+"+ end=+"+
 syn match djinniImport display "^\s*@\s*import\s*\"" contains=djinniImported
 syn region djinniExterned display contained start=+"+ end=+"+
@@ -46,3 +51,4 @@ hi def link djinniImported String
 hi def link djinniImport Include
 hi def link djinniExterned String
 hi def link djinniExtern Include
+hi def link djinniExt Constant
