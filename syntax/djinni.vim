@@ -7,28 +7,14 @@ let b:current_syntax = "djinni"
 syn keyword djinniTodo contained TODO FIXME XXX NOTE
 syn match djinniComment "#.*$" contains=djinniTodo
 
-syn keyword djinniPrimitiveType bool
-syn keyword djinniPrimitiveType i8
-syn keyword djinniPrimitiveType i16
-syn keyword djinniPrimitiveType i32
-syn keyword djinniPrimitiveType i64
-syn keyword djinniPrimitiveType f32
-syn keyword djinniPrimitiveType f64
-syn keyword djinniPrimitiveType string
-syn keyword djinniPrimitiveType binary
-syn keyword djinniPrimitiveType date
+syn keyword djinniPrimitiveType i8 i16 i32 i64 f32 f64
+syn keyword djinniPrimitiveType bool string binary date
 
-syn keyword djinniCompositeType list
-syn keyword djinniCompositeType set
-syn keyword djinniCompositeType map
-syn keyword djinniCompositeType optional
+syn keyword djinniCompositeType list set map optional
 
-syn keyword djinniStructure enum
-syn keyword djinniStructure record
-syn keyword djinniStructure interface
+syn keyword djinniStructure enum record interface
 
-syn keyword djinniQualifier static
-syn keyword djinniQualifier const
+syn keyword djinniQualifier static const
 
 syn match djinniExt "+j"
 syn match djinniExt "+c"
@@ -40,15 +26,15 @@ syn match djinniImport display "^\s*@\s*import\s*\"" contains=djinniImported
 syn region djinniExterned display contained start=+"+ end=+"+
 syn match djinniExtern display "^\s*@\s*extern\s*\"" contains=djinniExterned
 
-hi def link djinniTodo Todo
-hi def link djinniComment Comment
+hi def link djinniTodo          Todo
+hi def link djinniComment       Comment
 hi def link djinniPrimitiveType Type
 hi def link djinniCompositeType Type
-hi def link djinniStructure Structure
-hi def link djinniQualifier StorageClass
-hi def link djinniMacro Macro
-hi def link djinniImported String
-hi def link djinniImport Include
-hi def link djinniExterned String
-hi def link djinniExtern Include
-hi def link djinniExt Constant
+hi def link djinniStructure     Structure
+hi def link djinniQualifier     StorageClass
+hi def link djinniMacro         Macro
+hi def link djinniImported      String
+hi def link djinniImport        Include
+hi def link djinniExterned      String
+hi def link djinniExtern        Include
+hi def link djinniExt           Constant
