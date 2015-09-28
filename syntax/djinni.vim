@@ -18,6 +18,11 @@ syn keyword djinniPrimitiveType string
 syn keyword djinniPrimitiveType binary
 syn keyword djinniPrimitiveType date
 
+syn keyword djinniCompositeType list
+syn keyword djinniCompositeType set
+syn keyword djinniCompositeType map
+syn keyword djinniCompositeType optional
+
 syn keyword djinniStructure enum
 syn keyword djinniStructure record
 syn keyword djinniStructure interface
@@ -33,6 +38,7 @@ syn match djinniExtern display "^\s*@\s*extern\s*\"" contains=djinniExterned
 hi def link djinniTodo Todo
 hi def link djinniComment Comment
 hi def link djinniPrimitiveType Type
+hi def link djinniCompositeType Type
 hi def link djinniStructure Structure
 hi def link djinniQualifier StorageClass
 hi def link djinniMacro Macro
